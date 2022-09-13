@@ -16,3 +16,6 @@ You can run any django command with:</br>
 `./manage.py {command}` or `python manage.py {command}`
 - Apply all migrations:</br>
 `./manage.py migrate`
+- Create new app:</br>
+`./manage.py startapp {app name}`
+- Then add {app name} to INSTALLED_APPS list in {project name}/settings.py
