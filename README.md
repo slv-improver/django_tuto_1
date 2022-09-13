@@ -25,3 +25,17 @@ In the {project name} directory, you can run any django command with:</br>
 - After creating models, run:</br>
 `./manage.py makemigrations`, then:</br>
 `./manage.py migrate` to migrate to DB
+
+To create object, you can use the Django shell: `./manage.py shell`
+Then, import Model: `from {app name}.models import Obj`
+And, finally, create objects:
+- obj = Obj()
+- obj.name = 'Name'
+- obj.save()
+or:
+- `obj = Obj.objects.create(name='Name')`
+
+To count objects in DB:
+`Obj.objects.count()`
+And to display them:
+`Obj.objects.all()`
