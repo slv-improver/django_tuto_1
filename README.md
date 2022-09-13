@@ -29,9 +29,9 @@ In the {project name} directory, you can run any django command with:</br>
 To create object, you can use the Django shell: `./manage.py shell`
 Then, import Model: `from {app name}.models import Obj`
 And, finally, create objects:
-- obj = Obj()
-- obj.name = 'Name'
-- obj.save()
+- `obj = Obj()`
+- `obj.name = 'Name'`
+- `obj.save()`
 or:
 - `obj = Obj.objects.create(name='Name')`
 
