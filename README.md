@@ -14,5 +14,5 @@ Learn Django by building web app
 `django-admin startproject {project name}`
 You can run any django command with:</br>
 `./manage.py {command}` or `python manage.py {command}`
-- Then, in the {project name} directory, run server:</br>
-`./manage.py runserver`
+- Apply all migrations:</br>
+`./manage.py migrate`
