@@ -2,3 +2,13 @@ body {
     background: #222;
     color: #ddd;
 }
+
+menu ul li {
+    list-style: none;
+    display: inline;
+    margin-inline: 20px;
+}
+
+menu ul li a:visited {
+    color:aquamarine;
+}

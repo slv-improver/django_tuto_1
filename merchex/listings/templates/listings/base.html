@@ -6,6 +6,16 @@
         <link rel="stylesheet" href="{% static 'listings/styles.css' %}">
     </head>
     <body>
+        <header>
+            <menu>
+                <ul>
+                    <li><a href="/hello">Hello</a></li>
+                    <li><a href="/listings">Listings</a></li>
+                    <li><a href="/about-us">About us</a></li>
+                    <li><a href="/contact-us">Contact us</a></li>
+                </ul>
+            </menu>
+        </header>
         {% block content %}{% endblock %}
     </body>
 </html>
