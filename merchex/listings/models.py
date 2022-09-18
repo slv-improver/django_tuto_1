@@ -18,6 +18,9 @@ class Band(models.Model):
     comestible = models.fields.BooleanField(default=True)
     wikipedia = models.fields.URLField(null=True, blank=True)
 
+    def __str__(self):
+        return self.name
+
 class Listing(models.Model):
 
     class Type(models.TextChoices):
@@ -34,3 +37,6 @@ class Listing(models.Model):
         validators=[MinValueValidator(1900), MaxValueValidator(2021)]
     )
     type = models.fields.CharField(choices=Type.choices, max_length=6)
+
+    def __str__(self):
+        return self.title
