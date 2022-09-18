@@ -39,3 +39,9 @@ To count objects in DB:
 `Obj.objects.count()`
 And to display them:
 `Obj.objects.all()`
+
+After update models.py, if `migrate` command return `table already exists`, run:
+`./manage.py migrate --fake {app name}`
+> NOTE: I was forced to remove db.sqite3, \_\_pycache\_\_/ and migrations/*.py because I encountered an OperationalError: no such table: listings_band. Then I run: 
+1. `./manage.py makemigrations {app name}`
+2. `./manage.py migrate --run-syncdb`
