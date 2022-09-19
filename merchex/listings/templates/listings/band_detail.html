@@ -1,0 +1,18 @@
+{% extends 'listings/base.html' %}
+
+{% block title %} Band Detail {% endblock %}
+
+{% block content %}
+
+<h1>{{ band.name }}</h1>
+
+<ul>
+    <li>Année : {{ band.year }}</li>
+    <li>Saison : {{ band.get_season_display }}</li>
+    <li>Comestible : {{ band.comestible|yesno }}</li>
+    {% if band.wikipedia %}
+    <li>Wikipedia : <a href='{{ band.wikipedia }}'>{{ band.wikipedia }}</a></li>
+    {% endif %}
+</ul>
+
+{% endblock %}

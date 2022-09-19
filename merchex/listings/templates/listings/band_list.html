@@ -1,0 +1,15 @@
+{% extends 'listings/base.html' %}
+
+{% block title %} Band List {% endblock %}
+
+{% block content %}
+
+<h1>Plats préférés !</h1>
+
+<ul>
+    {% for band in bands %}
+    <li><a href='/band/{{ band.id }}'>{{ band.name }}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
