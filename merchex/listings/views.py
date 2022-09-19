@@ -55,12 +55,12 @@ def contact(request):
     if request.method == 'POST':
         form = ContactUsForm(request.POST)
         if form.is_valid():
-            # send_mail(
-            #     subject=f'Test',
-            #     message=form.cleaned_data['message'],
-            #     from_email=form.cleaned_data['email'],
-            #     recipient_list=['admin@merchex.xyz']
-            # )
+            send_mail(
+                subject=f'Test',
+                message=form.cleaned_data['message'],
+                from_email=form.cleaned_data['email'],
+                recipient_list=['admin@merchex.xyz']
+            )
             return  redirect('email-sent')
     else:
         form = ContactUsForm()
