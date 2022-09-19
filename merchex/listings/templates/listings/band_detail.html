@@ -13,6 +13,14 @@
     {% if band.wikipedia %}
     <li>Wikipedia : <a href='{{ band.wikipedia }}'>{{ band.wikipedia }}</a></li>
     {% endif %}
+    <li>
+        Annonces relatives :
+        <ul>
+            {% for listing in band.listing_set.all %}
+            <li><a href="{% url 'listing-detail' listing.id %}">{{ listing.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </li>
 </ul>
 
 <a href="{% url 'band-list' %}">Liste des plats</a>
