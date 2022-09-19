@@ -39,6 +39,15 @@ def listings(request):
         {'listings': listings}
     )
 
+def listing_detail(request, listing_id):
+    listing = Listing.objects.get(id=listing_id)
+    band = Band.objects.get(id=listing.band_id)
+    return render(
+        request,
+        'listings/listing_detail.html',
+        {'listing': listing, 'band_id': band.id}
+    )
+
 def contact(request):
     return render(
         request,

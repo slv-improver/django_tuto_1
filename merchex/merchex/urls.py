@@ -23,6 +23,7 @@ urlpatterns = [
     path("bands/", views.band_list, name='band-list'),
     path("band/<int:band_id>/", views.band_detail, name='band-detail'),
     path("about-us/", views.about),
-    path("listings/", views.listings),
+    path("listings/", views.listings, name='listings'),
+    path("listing/<int:listing_id>/", views.listing_detail, name='listing-detail'),
     path("contact-us/", views.contact),
 ]
