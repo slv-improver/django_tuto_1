@@ -61,11 +61,17 @@ def contact(request):
             #     from_email=form.cleaned_data['email'],
             #     recipient_list=['admin@merchex.xyz']
             # )
-            pass
+            return  redirect('email-sent')
     else:
         form = ContactUsForm()
     return render(
         request,
         'listings/contact.html',
         {'form': form}
+    )
+
+def email_sent(request):
+    return render(
+        request,
+        'listings/email_sent.html'
     )
