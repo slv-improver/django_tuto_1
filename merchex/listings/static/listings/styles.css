@@ -9,6 +9,6 @@ menu ul li {
     margin-inline: 20px;
 }
 
-menu ul li a:visited {
+a:visited {
     color:aquamarine;
 }
