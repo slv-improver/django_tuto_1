@@ -45,3 +45,6 @@ After update models.py, if `migrate` command return `table already exists`, run:
 > NOTE: I was forced to remove db.sqite3, \_\_pycache\_\_/ and migrations/*.py because I encountered an OperationalError: no such table: listings_band. Then I run: 
 1. `./manage.py makemigrations {app name}`
 2. `./manage.py migrate --run-syncdb`
+
+In case of two migrations made on different branch, merge them with:</br>
+`./manage.py makemigrations --merge` (only if they don't affect the same field)
