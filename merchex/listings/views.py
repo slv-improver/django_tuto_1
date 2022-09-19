@@ -1,5 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.shortcuts import redirect
+from django.core.mail import send_mail
 from listings.models import Band
 from listings.models import Listing
 from listings.forms import ContactUsForm
@@ -50,7 +52,18 @@ def listing_detail(request, listing_id):
     )
 
 def contact(request):
-    form = ContactUsForm()
+    if request.method == 'POST':
+        form = ContactUsForm(request.POST)
+        if form.is_valid():
+            # send_mail(
+            #     subject=f'Test',
+            #     message=form.cleaned_data['message'],
+            #     from_email=form.cleaned_data['email'],
+            #     recipient_list=['admin@merchex.xyz']
+            # )
+            pass
+    else:
+        form = ContactUsForm()
     return render(
         request,
         'listings/contact.html',
