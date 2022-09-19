@@ -12,3 +12,8 @@ menu ul li {
 a:visited {
     color:aquamarine;
 }
+
+.errorlist {
+    margin-bottom: -15px;
+    color: rgb(253, 141, 141);
+}
