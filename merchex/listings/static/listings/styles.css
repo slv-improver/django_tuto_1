@@ -13,6 +13,11 @@ a:visited {
     color:aquamarine;
 }
 
+button {
+    background: #666;
+    border-radius: 5px;
+}
+
 .errorlist {
     margin-bottom: -15px;
     color: rgb(253, 141, 141);

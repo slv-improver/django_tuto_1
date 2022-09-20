@@ -7,6 +7,7 @@
 <h1>Plats préférés !</h1>
 
 <ul>
+    <button><a href="{% url 'add-band' %}">Ajouter un groupe</a></button>
     {% for band in bands %}
     <li><a href='{% url "band-detail" band.id %}'>
         {{ band.name }}
