@@ -7,6 +7,7 @@
 <h1>Les annonces</h1>
 <p>Retrouvez toutes les annonces</p>
 <ul>
+    <button><a href="{% url 'add-listing' %}">Ajouter une annonce</a></button>
     {% for listing in listings %}
     <li><a href="{% url 'listing-detail' listing.id %}">
         {{ listing.title }}
