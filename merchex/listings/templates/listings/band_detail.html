@@ -23,6 +23,9 @@
     </li>
 </ul>
 
+<a class="alert" href="{% url 'band-delete' band.id %}">
+    [ Supprimer le groupe ]
+</a>
 <a class="no-clicked" href="{% url 'band-update' band.id %}">
     [ Modifier le groupe ]
 </a>

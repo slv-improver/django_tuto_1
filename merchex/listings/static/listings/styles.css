@@ -17,6 +17,10 @@ a:visited {
     color: inherit;
 }
 
+.alert {
+    background: red;
+}
+
 button {
     background: #666;
     border-radius: 5px;

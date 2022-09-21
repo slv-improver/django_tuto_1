@@ -1,0 +1,16 @@
+{% extends 'listings/base.html' %}
+
+{% block title %} Listing Delete {% endblock %}
+
+{% block content %}
+
+<h1>Confirmation de suppression</h1>
+
+<p>Êtes-vous sûr de vouloir supprimer l'annonce : <b>{{ listing.title }}</b></p>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <input class="alert" type="submit" value="Supprimer">
+</form>
+
+{% endblock %}
