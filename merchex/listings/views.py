@@ -81,6 +81,22 @@ def listing_detail(request, listing_id):
         {'listing': listing, 'band_id': band.id}
     )
 
+def listing_update(request, listing_id):
+    listing = Listing.objects.get(id=listing_id)
+    if request.method == 'POST':
+        form = ListingForm(request.POST, instance=listing)
+        if form.is_valid():
+            form.save()
+            return redirect('listing-detail', listing.id)
+    else:
+        form = ListingForm(instance=listing)
+    return render(
+        request,
+        'listings/listing_update.html',
+        {'listing': listing, 'form': form}
+    )
+
+
 def listing_create(request):
     if request.method == 'POST':
         form = ListingForm(request.POST)

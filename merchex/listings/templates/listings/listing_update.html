@@ -1,0 +1,15 @@
+{% extends 'listings/base.html' %}
+
+{% block title %} Update Listing {% endblock %}
+
+{% block content %}
+
+<h1>Mettre à jour l'annonce «{{ listing.name }}»</h1>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Mettre à jour">
+</form>
+
+{% endblock %}

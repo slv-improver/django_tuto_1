@@ -13,6 +13,9 @@
     <li>Groupe : <a href="{% url 'band-detail' band_id %}">{{ listing.band }}</a></li>
 </ul>
 
+<a class="no-clicked" href="{% url 'listing-update' listing.id %}">
+    [ Modifier l'annonce ]
+</a>
 <a href="{% url 'listings' %}">Liste des annonces</a>
 
 {% endblock %}

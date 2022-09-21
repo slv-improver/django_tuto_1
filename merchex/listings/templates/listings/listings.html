@@ -9,9 +9,15 @@
 <ul>
     <button><a href="{% url 'add-listing' %}">Ajouter une annonce</a></button>
     {% for listing in listings %}
-    <li><a href="{% url 'listing-detail' listing.id %}">
-        {{ listing.title }}
-    </a></li>
+    <li>
+        <a href="{% url 'listing-detail' listing.id %}">
+            {{ listing.title }}
+        </a>
+        &nbsp; - &nbsp;
+        <a class="no-clicked" href="{% url 'listing-update' listing.id %}">
+            [ Modifier l'annonce ]
+        </a>
+    </li>
     {% endfor %}
 </ul>
 
