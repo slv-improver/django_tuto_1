@@ -23,6 +23,9 @@
     </li>
 </ul>
 
+<a class="no-clicked" href="{% url 'band-update' band.id %}">
+    [ Modifier le groupe ]
+</a>
 <a href="{% url 'band-list' %}">Liste des plats</a>
 
 {% endblock %}

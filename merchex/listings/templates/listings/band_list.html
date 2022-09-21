@@ -9,9 +9,15 @@
 <ul>
     <button><a href="{% url 'add-band' %}">Ajouter un groupe</a></button>
     {% for band in bands %}
-    <li><a href='{% url "band-detail" band.id %}'>
-        {{ band.name }}
-    </a></li>
+    <li>
+        <a href='{% url "band-detail" band.id %}'>
+            {{ band.name }}
+        </a>
+        &nbsp; - &nbsp;
+        <a class="no-clicked" href="{% url 'band-update' band.id %}">
+            [ Modifier ]
+        </a>
+    </li>
     {% endfor %}
 </ul>
 
