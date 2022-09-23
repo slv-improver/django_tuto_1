@@ -48,3 +48,9 @@ After update models.py, if `migrate` command return `table already exists`, run:
 
 In case of two migrations made on different branch, merge them with:</br>
 `./manage.py makemigrations --merge` (only if they don't affect the same field)
+
+## Requirements
+
+- asgiref==3.5.2
+- Django==4.1.1
+- sqlparse==0.4.2
