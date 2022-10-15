@@ -8,13 +8,14 @@ class Band(models.Model):
         FALL = 'FA'
         WINTER = 'WI'
         SPRING = 'SP'
+    # SEASONS = (('SU', 'Summer), ('FA', 'Fall'), (), ())
 
     name = models.fields.CharField(max_length=100)
     year = models.fields.IntegerField(
         default=2000,
         validators=[MinValueValidator(1900), MaxValueValidator(2021)]
     )
-    season = models.fields.CharField(choices=Season.choices, max_length=5)
+    season = models.fields.CharField(choices=Season.choices, max_length=5) # choices=SEASONS
     comestible = models.fields.BooleanField(default=True)
     wikipedia = models.fields.URLField(null=True, blank=True)
 
